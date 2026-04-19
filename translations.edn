@@ -1088,13 +1088,13 @@
       :password-recovery/desc "パスワードの変更に使用できるトークンをメールでお送りします。"
 
       :log-in/send-token "トークンを送る"
-      :log-in/sending-token "送る中…"
+      :log-in/sending-token "送信中…"
 
 
       :history-tooltip "このカードの復習のログ"
       :history "復習のログ"
 
-      :finished-reviews "今日は完成！"
+      :finished-reviews "お疲れ様でした！"
       :finished-learning "今日は完成！"
 
       :delete "消去"
@@ -1122,7 +1122,7 @@
       :new "新規"
       :back "前に"
 
-      :card-content-placeholder "何かが覚えたい？"
+      :card-content-placeholder "何を覚えたいですか？"
 
       :pages.deck.review-button/label       "カードを復習する"
       :pages.deck.review-button/label:empty "今日のカードなし"
@@ -1150,12 +1150,12 @@
       :yes-delete-note "はい、消去する。"
 
       :make-cards-from-note "Make cards from this note"
-      :make-cards-tooltip "このメーモからカードを自動的に作成する"
+      :make-cards-tooltip "このメモからカードを自動的に作成する"
 
-      :cant-find-note "このメモを探すのはできません！"
-      :cant-find-deck "このデックを探すのはできません！"
+      :cant-find-note "メモが見つかりません！"
+      :cant-find-deck "デックが見つかりません！"
 
-      :note-content-placeholder "何が書きたいですか？"
+      :note-content-placeholder "何を書きたいですか？"
 
       :add-to-reviews "復習に追加"
 
@@ -1164,19 +1164,19 @@
       ;; [スペース]キーを押して「覚えている」にマークするか、[F]キーを押して「忘れた」にマークしてください。
       :review/last-side-hint
       (fn [r f]
-        [:<> r "キーを押して「覚えている」にマークするか、" f "キーを押して「忘れた」にマークしてください。"])
+        [:<> r "キーを押して「覚えた」にマークするか、" f "キーを押して「忘れた」にマークしてください。"])
         ; [:<> "Press " r " to mark as remembered, or " f " as forgot."])
 
       :learn/last-side-hint
       (fn [r f] [:<> "Press " r " to add to reviews, or " f " review again."])
 
       ;; Modal message
-      :imported-deck-already-exists "このデックはもうあります。"
-      :imported-note-already-exists "このメーモはもうあります。"
-      :imported-card-already-exists "このカードはもうあります。"
+      :imported-deck-already-exists "このデックは既に存在します。"
+      :imported-note-already-exists "このメモは既にに存在します。"
+      :imported-card-already-exists "このカードは既に存在します。"
 
       ;; Auto card generation from notes.
-      :no-new-cards-found "新規カードを見つけられません。"
+      :no-new-cards-found "新規カードが見つかりません。"
 
       :auto-update
       {:auto-update.status/download-and-install "ダウンロードしてインストールする"
@@ -1204,7 +1204,7 @@
 
       :account-settings "アカウントの設定"
 
-      :all-synced "All synced"
+      :all-synced "同期完了"
       :syncing "同期中…"
       :reconnecting "Retrying..."
       :sync-failed "Sync failed"
@@ -1219,10 +1219,10 @@
       :dashboard/today "今日"
       :dashboard/overview "概要"
 
-      :chart/total-cards-learned      "知ったカードの総計"
-      ; :chart/number-of-cards-reviewed "Reviews"
-      :chart/number-of-cards-learned  "新規カードを知った"
-      ; :chart/retention-rate           "Retention rate"
+      :chart/total-cards-learned      "学習したカードの総計"
+      :chart/number-of-cards-reviewed "復習したカードの枚数"
+      :chart/number-of-cards-learned  "学習したカードの枚数"
+      :chart/retention-rate           "正解率"
 
       :search-placeholder "このデッキの中に検索"
 
@@ -1236,15 +1236,15 @@
       :template-settings/template-fields "テンプレートのフィールド"
       :template-settings/template-fields:hint "フィールドを使用すると、カードにデータを追加できます。フィールドの値はテンプレートで使用できます。"
 
-      :sort/sort            "ソート"
-      :sort/direction       "Ascending"
-      :sort/manual          "Clear sort (manual)"
-      :sort/retention-rate  "Retention rate"
+      :sort/sort            "並べ替えルール"
+      :sort/direction       "昇順"
+      :sort/manual          "なし (手動)"
+      :sort/retention-rate  "正解率"
       :sort/alphabetical    "辞書的に"
       :sort/created-at      "作成日順"
       :sort/updated-at      "更新日順"
       :sort/interval-length "Last interval"
-      :sort/due-date        "Due date"
+      :sort/due-date        "復習予定日"
       :sort/random          "順序不同"
 
       :deck/filter "フィルタ"
@@ -1259,12 +1259,12 @@
 
       :preferences/title "環境設定"
       :preferences/font-style "フォントスタイル"
-      :preferences/font-size "フォントサイズ"
+      :preferences/font-size "文字サイズ"
       :preferences/dark-mode "ダークモード"
       :preferences/code-block-soft-wrap:title "コードブロックのソフトラップ"
       :preferences/code-block-soft-wrap:desc "マークダウンのコードブロック内の行がウィンドウ幅を超えた場合、次の行に折り返します。"
 
-      :type-answer/correct "成功"
+      :type-answer/correct "正解"
 
       :review-settings/title (fn [& [parent]]
                                (str (when parent (str (:name parent) "の"))
